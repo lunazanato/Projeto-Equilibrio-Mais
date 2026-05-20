@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Public Sans, sans-serif;
+}
+
+:root {
+    --branco: #ffff;
+    --cor-clara-verde: #DAF7E9;
+    --verde-claro:#8DC4AA;
+    --verde-verde: #4C9170;
+    --verde-medio: #1E5E3F;
+    --verde-mato: #06331D;
+    --cor-escura-marrom: #291100;
+} 
+
+body {
+    background-color: var(--verde-mato);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+main {  
+    width: 90vw;
+    min-height: 80vh;
+    background-color: var(--branco);
+    border-radius: 19px; 
+}
+
+/* CONTAINER */
+/* .container-cadastro {
+    background-color: aliceblue;
+} */
+
+/* TOPO */
+.header {
+    background-color: var(--verde-medio);
+    border-radius: 8px 8px 0px 0px;
+    padding: 20px;
+}
+
+.header h1, p {
+    margin-bottom: 5px;
+    color: var(--branco);
+}
+
+/* CONTAINER COM OS FORMS*/
+.container-card {
+    padding: 30px;
+}
+
+/* PERFIL */
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 5px solid var(--branco);
+    outline: 4px solid var(--verde-mato);
+}
+
+.info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.info p {
+    color: black;
+    font-size: 1.2em;
+}
+
+.btn {
+    background-color: var(--verde-mato);
+    color: var(--branco);
+    border: none;
+    font-weight: 400;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    transition: transform 0.1s ease;
+    transform: scale(1.03);
+}
+
+/* FORM */
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 5px;
+}
+
+.campo input, select {
+    padding: 10px 0px 10px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--verde-claro);
+}
+
+.campo p {
+    color: black;
+    margin-top: 10px;
+}
+
+.campo a {
+    color: var(--verde-verde);
+    text-decoration: none;
+}
+
+.campo a:hover {
+    text-decoration: underline;
+    color: var(--verde-mato);
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+

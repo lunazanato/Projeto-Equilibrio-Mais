@@ -1,0 +1,211 @@
+:root {
+    --branco: #ffff;
+    --cor-clara-verde: #DAF7E9;
+    --verde-claro:#8DC4AA;
+    --verde-verde: #4C9170;
+    --verde-medio: #1E5E3F;
+    --verde-mato: #06331D;
+    --cor-escura-marrom: #291100;
+} 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    background-color: var(--verde-mato);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Botão de Saída no canto superior direito */
+.exit-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Container Principal */
+.main-card {
+    background-color: var(--verde-verde);
+    width: 90%;
+    max-width: 80vw;
+    height: 700px;
+    border-radius: 12px;
+    display: flex;
+    padding: 40px 40px 0px 40px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Lado Esquerdo - Formulário */
+.form-section {
+    flex: 1.2;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-icon {
+    background: #000;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--cor-escura-marrom);
+}
+
+input {
+    padding: 10px;
+    border: 1px solid var(--branco);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Botão e Link */
+.actions {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.btn-submit {
+    background-color: var(--verde-claro);
+    color: var(--verde-mato);
+    border: none;
+    padding: 12px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-size: 15px;
+}
+
+.btn-submit a {
+    text-decoration: none;
+    color: var(--verde-mato);
+}
+
+.btn-submit:hover{
+    transition: transform 0.1s ease;
+    transform: scale(1.03);
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+.login-link {
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+}
+
+.login-link a {
+    display: block;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.login-link a:hover {
+    color: var(--verde-mato);
+}
+
+/* Divisor Vertical */
+.divider {
+    width: 2px;
+    background-color: var(--verde-mato);
+    margin: 20px 0;
+}
+
+/* Lado Direito - Info */
+.info-section {
+    flex: 0.8;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.info-section h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.info-section p {
+    font-size: 20px;
+    color: #000000;;
+}
+
+/* Placeholder da Imagem */
+.image-placeholder {
+    width: 100%;
+    height: 350px;
+    margin-top: auto;
+    /* Estilização apenas para visualização do espaço */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.image-placeholder img {
+    
+    width: 100%;
+    object-fit: contain;
+}
+
+h1{
+    margin-bottom: 60px;
+    font-size: 3rem;
+    color: #000000;
+}

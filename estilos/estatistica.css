@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+:root {
+    --branco: #ffff;
+    --cor-clara-verde: #DAF7E9;
+    --verde-claro:#8DC4AA;
+    --verde-verde: #4C9170;
+    --verde-medio: #1E5E3F;
+    --verde-mato: #06331D;
+    --cor-escura-marrom: #291100;
+} 
+ 
+
+#estatisticas {
+    padding-bottom: 40px;
+}
+
+#estatisticas h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--cor-escura-marrom);
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+.container-graficos {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    text-align: center;
+    margin: 0px 15px 30px 15px;
+    background-color: var(--verde-claro);
+}
+
+.boxPizza {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ALERTA */
+.alerta-box {
+    background: orange;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.estatisticaCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.cardNutri {
+    background: #f3c86a;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.destaque {
+    grid-column: span 2;
+    background: #e6b84f;
+}
+
+/* RELATÓRIO */
+.relatorio {
+    margin: auto;
+    padding: 20px;
+    background: var(--verde-claro);
+    border-radius: 10px;
+    text-align: center;
+    width: 60vw;
+    height: 600px;
+    padding: 15px;
+}

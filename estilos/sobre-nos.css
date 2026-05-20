@@ -1,0 +1,132 @@
+:root {
+            --branco: #ffff;
+            --cor-clara-verde: #DAF7E9;
+            --verde-claro:#8DC4AA;
+            --verde-verde: #4C9170;
+            --verde-medio: #1E5E3F;
+            --verde-mato: #06331D;
+            --cor-escura-marrom: #291100;     /* Verde escuro do título/botão */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--verde-mato);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Botão de Saída (Flecha no canto superior direito) */
+        .exit-button {
+           position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 21px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Container Principal */
+        .main-card {
+            background-color: var(--verde-claro);
+            width: 80%;
+            height: 700px;
+            border-radius: 15px;
+            display: flex;
+            padding: 0 60px; /* Padding lateral */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: relative;
+            align-items: center;
+        }
+
+        /* Lado Esquerdo - Texto */
+        .content-section {
+            flex: 1.3; 
+            padding-left: 80px; /* Empurra o conteúdo para a direita */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 85px; 
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 24px; 
+            line-height: 1.4;
+            color: #1a1a1a;
+            margin-bottom: 45px;
+            max-width: 600px; 
+            text-align: center;
+        }
+
+        /* Botão Mais Informações */
+        .btn-more {
+            background-color: var(--verde-mato);
+            color: white;
+            border: none;
+            padding: 20px 50px; 
+            border-radius: 50px;
+            font-size: 22px; 
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn-more:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        /* Lado Direito - Container da Imagem */
+        .image-section {
+            flex: 1;
+            height: 100%; /* Ocupa a altura total do card */
+            display: flex;
+            align-items: flex-end; /* Alinha a imagem na base do card */
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Espaço reservado para a sua imagem */
+        .image-placeholder {
+            width: 100%;
+            height: 90%; /* Ajustado para o tamanho da ilustração da imagem */
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .image-placeholder img {
+            width: 750px;
+             /* Garante que a imagem não distorça */
+        }
+
+        /* Linha decorativa verde na base da imagem (opcional, detalhe da captura) */
+        .bottom-line {
+            position: absolute;
+            bottom: 40px;
+            right: 0;
+            width: 80%;
+            height: 2px;
+            background-color: #5bb377;
+            display: none; /* Remova o display:none se quiser a linha verde */
+        }

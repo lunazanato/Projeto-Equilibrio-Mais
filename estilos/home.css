@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Public Sans, sans-serif;
+}
+
+
+:root {
+    --branco: #ffff;
+    --cor-clara-verde: #DAF7E9;
+    --verde-claro:#8DC4AA;
+    --verde-verde: #4C9170;
+    --verde-medio: #1E5E3F;
+    --verde-mato: #06331D;
+    --cor-escura-marrom: #291100;
+} 
+
+body {
+    background-color:var(--cor-clara-verde);
+}
+
+
+/* HEADER */
+.header {
+    background-color: var(--verde-mato);
+    color:var(--branco);
+    margin: 0px 20px 20px 20px;
+    padding: 30px;
+    border-radius: 15px;
+    
+}
+
+.header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* NAVBAR */
+
+
+header {
+    position: sticky;
+    top: 0;                      /* Diz ao navegador para grudar exatamente no topo */
+    z-index: 1000;               /* Garante que o menu fique por cima dos cards e gráficos ao rolar */
+    background-color: #ECF5E2; /* Evita que o conteúdo da página apareça de forma transparente por trás do texto */
+    width: 100%;
+    transition: box-shadow 0.3s ease; /* Efeito suave caso queira adicionar sombra */
+
+    margin-bottom: 15px;
+}
+
+/* Opcional: Adiciona uma leve sombra quando a tela rolar para dar ideia de profundidade */
+header:not([style*="top: -"]) {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#img-logo {
+    display: flex;            /* Garante que o container do logo se comporte bem no flex */
+    align-items: center;
+}
+
+#img-logo img {
+    width: 60px;
+    height: auto;
+
+}
+/* NAVBAR */
+nav {
+    display: flex;
+    align-items: center;      /* Mantém os links alinhados verticalmente */
+    gap: 40px;                /* Espaçamento de 40px exatos entre cada link */
+    font-weight: bold;
+    margin: 0;                /* Removeu o 'auto' que estava jogando o menu para baixo */
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: var(--verde-verde);
+    transition: transform 0.5s ease;
+    transform: scale(1.03);
+}
+
+.container .card:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.03);
+}
+
+#top {
+    display: flex;
+    align-items: center;      /* Alinha o logo e os links perfeitamente no centro vertical */
+    gap: 350px;                /* Espaçamento de 40px entre o logo e o primeiro item do menu */
+    padding: 10px 20px;       /* Controla a altura do header para não ficar muito gigante */
+    width: 100%;
+}
+
+#buttonAdd {
+    text-align: center;
+}
+
+.btnAdd {
+    background-color: var(--verde-verde);
+    color: var(--branco);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btnAdd a {
+    text-decoration: none;
+    color: var(--branco);
+}
+/* transformar o botao em uma cor mais clara ao passar o mouse por cima do botao */
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: center;
+
+}
+
+.search span {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 4px 0px 0px 4px;
+    border: none;
+    background-color: var(--verde-mato);
+    text-align: center;
+    color: var(--branco);
+}
+
+.search i {
+    background-color: var(--verde-mato);
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 0px 4px 4px 0px;
+}
+.container-cards {
+    background-color: var(--verde-mato);
+    height: 530px;
+}
+/* CARDS */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    padding: 50px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: var(--branco); /*nao sei que cor colocar nos card!!!!!!!!!!!!*/
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+
+.card p {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+
+.icone img {
+    width: 250px;
+}
+
+
+
+
+/* RESPONSIVO */
+@media(max-width: 900px){
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

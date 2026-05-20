@@ -1,0 +1,129 @@
+/* Reset básico e definição da fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    background-color: #DAF7E9; /* Tom de verde bem claro do fundo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Botão de sair no canto superior direito */
+.btn-sair {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+}
+
+.btn-sair:hover {
+    opacity: 0.7;
+}
+
+/* Cabeçalho que segura a logo */
+.header {
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #4C9170; /* Linha sutil divisória */
+}
+
+.logo {
+    max-height: 50px; /* Ajuste a altura máxima conforme sua imagem */
+    object-fit: contain;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 620px; /* Mantém a proporção do texto centralizado */
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.titulo {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.descricao {
+    font-size: 1.15rem;
+    color: #1a1a1a;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+/* Formulário e Inputs */
+.formulario {
+    width: 100%;
+    max-width: 480px; /* Centraliza e limita a largura do input/botão */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333333;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Botão recuperar senha com o efeito solicitado */
+.btn-recuperar {
+    background-color: #06331D; /* Verde escuro do botão */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 32px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+/* Efeito de hover / touch */
+.btn-recuperar:hover, 
+.btn-recuperar:active {
+    transform: scale(1.03);
+}

@@ -1,0 +1,272 @@
+:root {
+    --branco: #ffff;
+    --cor-clara-verde: #DAF7E9;
+    --verde-claro:#8DC4AA;
+    --verde-verde: #4C9170;
+    --verde-medio: #1E5E3F;
+    --verde-mato: #06331D;
+    --cor-escura-marrom: #291100;
+    --white-bg: #f2f5e9;
+} 
+
+
+/* MUDAR AS CORES DO ROOT */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Public Sans, sans-serif;
+}
+
+body {
+    background-color: var(--verde-mato);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+main {  
+    width: 90vw;
+    background-color: var(--white-bg);
+    border-radius: 15px; 
+    overflow: hidden;
+}
+
+.container_tela_de_login {
+    display: flex;
+    min-height: 80vh;
+}
+
+/* --- LADO ESQUERDO --- */
+.login{
+    flex: 1;
+    padding: 5px;
+    background-color: var(--white-bg);
+}
+
+/* configuracoes da logo roxa */
+#img-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+img {  
+    width: 120px;
+} 
+/* fim configuracoes da logo roxa */
+
+.container-conteudo {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: var(--verde-mato);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.login-box {
+    background-color: var(--verde-verde);
+    padding: 30px;
+    border-radius: 40px;
+    color: white;
+    margin-top: 20px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    background-color: var(--branco);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.input-group input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.esq-senha, .criar-conta  {
+    display: block;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #eee;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.esq-senha a, .criar-conta a {
+    color: var(--cor-escura-marrom);
+    text-decoration: none;
+}
+
+.esq-senha a:hover, .criar-conta a:hover {
+    text-decoration: underline;
+    color: var(--verde-mato);
+}
+
+
+.botao-entrar {
+    font-size: 1em;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--verde-mato);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.botao-entrar a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.botao-entrar:hover {
+    transition: transform 0.1s ease;
+    transform: scale(1.03);
+}
+
+.criar-conta a, .esq-senha a { 
+    color: var(--cor-escura-marrom); 
+}
+
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.03);
+}
+/* --- FIM DO LADO ESQUERDO --- */
+
+/* --- LADO DIREITO --- */
+.info {
+    flex: 1.2;
+    background-image: linear-gradient(to left, #6ca276, #ecedda);
+    padding: 40px;
+    position: relative;
+    /* Curva sutil separando os lados */
+    border-top-left-radius: 100px 50%;
+    border-bottom-left-radius: 100px 50%;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: var(--cor-escura-marrom);
+    font-size: 0.9rem;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+.barra-pesquisa {
+    background-color: var(--verde-mato);
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-pesquisa input {
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+    width: 100px;
+}
+
+.img-vegetais {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.img-vegetais img {
+    width: 650px;
+}
+
+/* Classe que aplica a animação à imagem */
+.img-vegetais img {
+    /* Mantém as configurações de tamanho/posição que você já tiver colocado */
+    
+    /* Configuração da animação: */
+    animation: flutuar 1s ease-in-out infinite alternate;
+}
+
+/* Criação do movimento da animação */
+@keyframes flutuar {
+    0% {
+        transform: translateY(0); /* Posição inicial */
+    }
+    100% {
+        transform: translateY(60px); /* Move 25 pixels para cima */
+    }
+}
+
+.info-adicional {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    left: 100px;
+    text-align: right;
+}
+
+.info-adicional p {
+    font-size: 0.9rem;
+    color: var(--dark-green);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.saiba-mais {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--dark-green);
+    font-size: 0.8rem;
+}
+/* --- FIM DO LADO DIREITO --- */
+
+
+/* Responsividade (TERMINAR) */
+@media (max-width: 800px) {
+    .inner-card { flex-direction: column; }
+    .info-side { border-radius: 0; }
+}

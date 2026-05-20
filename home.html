@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="imagens/logoGrandeParaFavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/home.css">
+    <link rel="stylesheet" href="estilos/estatistica.css">
+    <link rel="stylesheet" href="estilos/ultraprocessados.css">
+    <link rel="stylesheet" href="estilos/sugestoes-receitas.css">
+    <link rel="shortcut icon" href="imagens/logoGrandeParaFavicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af61149184.js" crossorigin="anonymous"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+
+<body>
+  <header> <!-- HEADER -->
+      <div id="top">
+          <div id="img-logo">
+            <img src="imagens/logo.png" alt="">
+          </div>
+          
+          <nav> <!--MENU DE NAVEGACAO -->
+              <a href="perfil.html">Perfil</a>
+              <a href="#home">Home</a>
+              <a href="#estatisticas">Estatísticas</a>
+              <a href="#container-ultraprocessados">Principais ultraprocessados</a>
+              <a href="#container-saudaveis">Principais alimentos saudáveis</a>
+              <a href="#sugestoes-de-receitas">Sugestões de receitas</a>
+          </nav> <!--FIM DO MENU DE NAVEGACAO -->
+      </div>
+  </header> <!-- FIM DO HEADER -->
+
+    <section id="home"> 
+        <div class="header">
+            <h1>Bem-vindo ao Equilibrio+</h1>
+            <p>Coloque os alimentos consumidos nas suas refeições e analisaremos seu consumo sobre o consumo de ultraprocessados</p>
+            <div id="buttonAdd">
+                <button class="btnAdd"><a href="addrefeicao.html">+ adicionar refeições diárias</a></button>
+            </div>
+        </div>
+        <div class="search">
+            <span> O que o software pode fazer?</span><i class="fa-solid fa-magnifying-glass" style="color: rgb(255, 255, 255);"></i>
+        </div>
+        
+        <section class="container-cards"> <!--CONTAINER COM OS CARDS-->
+                <!-- CARDS -->
+                
+                <div class="container">
+                    <div class="card">
+                        <div class="icone"><img src="imagens/chart-pie-solid.png" alt=""></div>
+                        <p>Análise de nutrientes</p>
+                    </div>
+        
+                    <div class="card">
+                        <div class="icone"><img src="imagens/clipboard-regular.png" alt=""></div>
+                        <p>Relatório alimentar</p>
+                    </div>
+        
+                    <div class="card">
+                        <div class="icone"><img src="imagens/triangle-exclamation-solid.png" alt=""></div>
+                        <p>Alerta de ultraprocessados</p>
+                    </div>
+        
+                    <div class="card">
+                        <div class="icone"><img src="imagens/utensils-solid.png" alt=""></div>
+                        <p>Sugestões de receitas</p>
+                    </div>
+                </div>
+        </section> <!--FIM DO CONTAINER COM OS CARDS-->
+    </section>
+
+    <section id="estatisticas"> <!--CONTAINER ESTATISTICAS-->
+        <h1>Estatísticas Nutricionais</h1>
+        <div class="container-graficos">
+
+            <!-- GRÁFICO PIZZA -->
+            <div class="boxPizza">
+                <h2>Total de nutrientes</h2>
+                <canvas id="pizzaChart"></canvas>
+            </div>
+
+            <!-- INFO ALERTA -->
+            <div class="boxAlerta">
+                <h2>Alerta nutricional</h2>
+
+                <div class="alerta-box">
+                    <i class="fa-solid fa-triangle-exclamation" style="color: rgb(255, 0, 0);"></i>Consumo excessivo de ultraprocessados!
+                </div>
+
+                <div class="estatisticaCards">
+                    <div class="cardNutri">Açúcar<br><strong>150g</strong></div>
+                    <div class="cardNutri">Gordura saturada<br><strong>57g</strong></div>
+                    <div class="cardNutri">Sódio<br><strong>11g</strong></div>
+                    <div class="cardNutri">Gordura trans<br><strong>51g</strong></div>
+                    <div class="cardNutri destaque">
+                        Calorias<br><strong>3532 kcal</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRAFICO "DONUT" -->
+            <div class="boxPizza">
+                <h2>Total de Calorias</h2>
+                <canvas id="donutChart"></canvas>
+            </div>
+
+        </div>
+
+        <!-- RELATÓRIO -->
+        <div class="relatorio">
+            <h2>Relatório semanal</h2>
+            <canvas id="linhaChart"></canvas>
+        </div>
+        <script src="estatistica.js"></script>
+    </section> <!-- FIM DO CONTAINER ESTATISTICAS-->
+
+    <section id="container-ultraprocessados"> <!--CONTAINER DOS ULTRAPROCESSADOS-->
+        <h1>Principais ultraprocessados consumidos</h1>
+
+        <div class="banner">
+            <img src="imagens/pexels-mirkofabian-11975899.jpg" alt="">
+        </div>
+
+        <div class="descricao">
+            <p>Alimentos ultraprocessados são formulações industriais feitas, em sua maioria ou na totalidade, de substâncias extraídas de alimentos (óleos, gorduras, açúcar, proteínas), derivadas de constituintes de alimentos (gorduras hidrogenadas, amido modificado) ou sintetizadas em laboratório com base em matérias orgânicas como carvão e petróleo (corantes, aromatizantes, realçadores de sabor)</p>
+        </div>
+        
+        <div class="cards-consumidos"> <!-- cards ultraprocessados -->
+            <!-- card 1 -->
+            <div class="conteudo-cards-consumidos"> 
+                <h2>Refrigerante</h2>
+                <div class="card-info">
+                    <img src="imagens/coca_cola_png.png" alt="">
+                    <div class="grafico">
+                        <div class="circulo"><span>67%</span></div>
+                    </div>
+                </div>
+
+                <div class="rodape-card">
+                    <div id="rodapeInfo"><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i> Alto em açúcar</div>
+                    <a href="Saibamais-refri.html">Saiba  mais</a>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Salgadinho</h2>
+                <div class="card-info">
+                    <img src="imagens/doritos_PNG.png" alt="imagem de um salgadinho">
+                    <div class="grafico">
+                        <div class="circulo"><span>90%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo"><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i>  Alto em sódio</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Biscoito recheado</h2>
+                <div class="card-info">
+                    <img src="imagens/biscoito.png" alt="imagem de um biscoito recheado">
+                    <div class="grafico">
+                        <div class="circulo"><span>56%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo"><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i> Alto em açúcar</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Miojo de galinha caipira</h2>
+                <div class="card-info">
+                    <img src="imagens/miojo.png" alt="imagem de um miojo">
+                    <div class="grafico">
+                        <div class="circulo"><span>89%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo"><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i> Alto em sódio</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- card 5 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Batata Frita</h2>
+                <div class="card-info">
+                    <img src="imagens/batata-frita.png" alt="imagem de batata frita">
+                    <div class="grafico">
+                        <div class="circulo"><span>75%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo"><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i> Alto em sódio</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>MilkShake</h2>
+                <div class="card-info">
+                    <img src="imagens/milkshake.png" alt="imagem de um milkshake">
+                    <div class="grafico">
+                        <div class="circulo"><span>51%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo"><i class="fa-solid fa-magnifying-glass fa-rotate-90"></i> Alto em açúcar</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+        </div> <!-- fim dos cards ultraprocessados -->
+    </section> <!-- FIM CONTAINER DOS ULTRAPROCESSADOS-->
+    
+    <section id="container-saudaveis"> <!--CONTAINER DOS SAUDAVEIS-->
+        <h1>Principais alimentos saudáveis consumidos</h1>
+        <div class="banner">
+            <img src="7.jpg" alt=""> 
+        </div>
+        <div class="descricao">
+            <p>Alimentos saudáveis são aqueles que fornecem ao corpo os nutrientes necessários para funcionar bem como vitaminas, minerais, proteínas, gorduras boas e carboidratos de qualidade, sem excesso de substâncias prejudiciais, como açúcar, sal e gorduras ruins.</p>
+        </div>
+        <div class="cards-consumidos"> <!-- cards saudaveis -->
+            <!-- card 1 -->
+            <div class="conteudo-cards-consumidos"> 
+                <h2>Arroz branco</h2>
+                <div class="card-info">
+                    <img src="imagens/arroz-branco.png" alt="imagem de arroz branco">
+                    <div class="grafico">
+                        <div class="circulo"><span>97%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo-saudavel">Rico em Carboidratos</div>
+                    <a href="Saibamais-arroz.html">Saiba mais</a>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Feijão carioca</h2>
+                <div class="card-info">
+                    <img src="imagens/feijao.png" alt="imagem de feijão carioca">
+                    <div class="grafico">
+                        <div class="circulo"><span>50%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo-saudavel">Rico em Ferro</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Cenoura</h2>
+                <div class="card-info">
+                    <img src="imagens/cenoura.png" alt="imagem de cenoura">
+                    <div class="grafico">
+                        <div class="circulo"><span>50%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo-saudavel">Rico em Vitamina A</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+            <!-- card 4 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Frango</h2>
+                <div class="card-info">
+                    <img src="imagens/peito de frango.png" alt="imagem de peito de frango">
+                    <div class="grafico">
+                        <div class="circulo"><span>70%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo-saudavel">Rico em Vitaminas do complexo B</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+             <!-- card 5 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Banana</h2>
+                <div class="card-info">
+                    <img src="imagens/banana.webp" alt="imagem de banana">
+                    <div class="grafico">
+                        <div class="circulo"><span>52%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo-saudavel">Rico em Vitamina B6</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+             <!-- card 6 -->
+            <div class="conteudo-cards-consumidos">
+                <h2>Alface</h2>
+                <div class="card-info">
+                    <img src="imagens/alface.png" alt="imagem de alface">
+                    <div class="grafico">
+                        <div class="circulo"><span>51%</span></div>
+                    </div>
+                </div>
+                <div class="rodape-card">
+                    <div id="rodapeInfo-saudavel">Rico em Vitamina A</div>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+            </div>
+        </div> <!-- fim dos cards saudaveis -->
+    </section> <!--CONTAINER DOS SAUDAVEIS-->
+
+
+    <section id="sugestoes-de-receitas"> <!--CONTAINER DAS SUGESTOES-->
+        <h1>Sugestões de receitas</h1>
+
+        <div class="carousel-wrapper">
+           
+
+            <div class="cards-container">
+                
+                <div class="recipe-card partial-card">
+                    <div class="card-header">
+                        <a href="#" class="recipe-link">Ver receita</a>
+                    </div>
+                    <div class="image-box">
+                        <img src="imagens/molho-saudavel.png" alt="Molho de Tomate Caseiro">
+                    </div>
+                    <h2 class="card-title">Molho de Tomate Caseiro</h2>
+                    <p class="card-description">
+                        Molho de tomate caseiro é uma opção saudável e saborosa, feito com ingredientes frescos e sem conservantes, ideal para massas e pizzas.
+                    </p>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="card-header">
+                        <a href="#" class="recipe-link">Ver receita</a>
+                    </div>
+                    <div class="image-box">
+                        <img src="imagens/chips.webp" alt="Batata chips">
+                    </div>
+                    <h2 class="card-title">Batata chips</h2>
+                    <p class="card-description">
+                        Batatas chips saudáveis, como as assadas ou feitas na air fryer, possuem menos gordura e calorias que as fritas tradicionais.
+                    </p>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="card-header">
+                        <a href="#" class="recipe-link">Ver receita</a>
+                    </div>
+                    <div class="image-box">
+                        <img src="imagens/suco_limao.png" alt="Suco de limão">
+                    </div>
+                    <h2 class="card-title">Água com limão e gás</h2>
+                    <p class="card-description">
+                        Água com limão e gás é simples, mas tem alguns benefícios interessantes — principalmente como alternativa saudável a refrigerantes.
+                    </p>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="card-header">
+                        <a href="sugestoes-biscoito.html" class="recipe-link">Ver receita</a>
+                    </div>
+                    <div class="image-box">
+                        <img src="imagens/biscoito_saudavel.png" alt="Biscoito de aveia">
+                    </div>
+                    <h2 class="card-title">Biscoito de aveia</h2>
+                    <p class="card-description">
+                        Biscoitos de aveia saudáveis são ricos em fibras, ajudando na digestão e proporcionando sensação de saciedade. É excelente para o controle do colesterol e açúcar no sangue.
+                    </p>
+                </div>
+
+                <div class="recipe-card partial-card">
+                    <div class="card-header">
+                        <a href="#" class="recipe-link">Ver receita</a>
+                    </div>
+                    <div class="image-box">
+                        <img src="imagens/barra-cereal.png" alt="Barra de cereal">
+                    </div>
+                    <h2 class="card-title">Barra de cereal</h2>
+                    <p class="card-description">
+                        Barras de cereal saudáveis são uma opção rápida e nutritiva para o lanche, fornecendo energia e fibras.
+                    </p>
+                </div>
+
+                
+
+                
+
+            </div>
+        </div>
+
+        <footer class="main-footer">
+        <div class="footer-left">
+            <img src="imagens/logo.png" alt="logo" width="300px">
+        </div>
+        
+        <div class="footer-center">
+            <p>Equilíbrio+ é um site que visa auxiliar a sua dieta no alto consumo de ultraprocessados, visto que consumir esses alimentos teve um aumento significativo na sociedade atual</p>
+        </div>
+
+        <div class="footer-right">
+            <img src="imagens/seguranca.png" alt="" width="300px">
+            <span class="security-text">Navegação segura</span>
+        </div>
+    </footer>
+    </section> <!--CONTAINER SUGESTÃO DE RECEITAS-->
+</body>
+</html>

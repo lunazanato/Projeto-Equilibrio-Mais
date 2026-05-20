@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equilíbrio+</title>
+    <link rel="stylesheet" href="estilos/estilo_login.css">
+    <script src="https://kit.fontawesome.com/af61149184.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/logoGrandeParaFavicon.png" type="image/x-icon">
+    
+</head>
+<body>
+    <main>
+        <div class="container_tela_de_login">
+            
+            <section class="login"> <!--parte do lado esquerdo da tela--->
+                <div id="img-logo">
+                    <img src="imagens/logo.png" alt="">
+                </div>
+
+                <div class="container-conteudo">
+                    <h1>Menos ultraprocessados,<br>mais saúde</h1>
+                    <p>Monitore sua alimentação, reduza ultraprocessados e construa hábitos mais saudáveis.</p>
+
+                    <div class="login-box">
+                        <h2>Login</h2>
+                        <form id="form">
+                            <div class="input-group">
+                                <span class="icon"><i class="fa-solid fa-user" style="color: rgb(0, 0, 0);"></i></span>
+                                <input type="text" id="usuarioEmail" placeholder="Usuário ou Email">
+                            </div>
+                            <div class="input-group">
+                                <span class="icon"><i class="fa-solid fa-lock" style="color: rgb(0, 0, 0);"></i></span>
+                                <input type="password" id="senha" placeholder="senha" >
+                            </div>
+                            <p class="esq-senha">Esqueceu sua senha? <a href="recuperar-senha.html">Recuperar senha</a></p> 
+                            <a href="home.html"><button type="submit" class="botao-entrar">Entrar</button></a>
+                            
+                        </form>
+                        <p class="criar-conta">Não possui uma conta? <a href="cadastro-usuario.html">Criar</a></p>
+                        
+                        <div class="social-icons">
+                            <span><i class="fa-brands fa-facebook" style="color: rgb(255, 255, 255);"></i></span>
+                            <span><i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255);"></i></span>
+                            <span><i class="fa-brands fa-x-twitter" style="color: rgb(255, 255, 255);"></i></span>
+                            <span><i class="fa-brands fa-google" style="color: rgb(255, 255, 255);"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </section> <!--fim da parte do lado esquerdo da tela--->
+
+            <section class="info"> <!--parte do lado direito da tela--->
+                <nav class="nav-right">
+                    <a href="sobre-nos.html">Sobre nós</a>
+                    <a href="contato.html">Contato</a>
+                    <div class="barra-pesquisa">
+                        <input type="text">
+                        <span><i class="fa-solid fa-magnifying-glass" style="color: rgb(255, 255, 255);"></i></span>
+                    </div>
+                </nav>
+
+                <div class="img-vegetais">
+                    <img src="imagens/legumes.png" alt=""> <!--FOTO DO LEGUME-->
+                </div>
+
+                <aside>
+                    <div class="info-adicional">
+                        <p>"O consumo de alimentos ultraprocessados no Brasil mais que dobrou nas últimas décadas, passando de 10% para 23% da dieta da população."</p>
+                        <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2025-11/ultraprocessados-ja-sao-quase-um-quarto-da-alimentacao-dos-brasileiros" class="saiba-mais" target="_blank">Saiba mais</a>
+                    
+                </aside>
+            </section>
+
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+
+</html>

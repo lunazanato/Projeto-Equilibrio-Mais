@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Usuário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/cadastro.css">
+    <link rel="shortcut icon" href="imagens/logoGrandeParaFavicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <a href="index.html" target="_self" class="exit-button" title="Voltar">&#10141;</a>
+    <div class="main-card">
+        
+        <div class="form-section">
+            <h1>Cadastro do Usuário</h1>
+            <form>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome">
+                    </div>
+                    <div class="input-group">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" id="sobrenome">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="label-with-icon">
+                        <label for="user">Nome de usuário</label>
+                        <span class="info-icon">?</span>
+                    </div>
+                    <input type="text" id="user">
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmar">Confirmar senha</label>
+                        <input type="password" id="confirmar">
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-submit"><a href="home.html">Criar Conta</a></button>
+                    <div class="login-link">
+                        Já possui uma conta?
+                        <a href="index.html">Clique aqui</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-section">
+            <h1>Ótimo ter você aqui!</h1>
+            <p>Seja bem-vindo ao nosso software de controle de ultraprocessados!</p>
+            
+            <div class="image-placeholder">
+                <img src="imagens/cadastro.png" alt="Sua imagem aqui"> 
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

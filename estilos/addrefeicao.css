@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Public Sans, sans-serif;
+}
+
+:root {
+    --branco: #ffff;
+    --cor-clara-verde: #DAF7E9;
+    --verde-claro:#8DC4AA;
+    --verde-verde: #4C9170;
+    --verde-medio: #1E5E3F;
+    --verde-mato: #06331D;
+    --cor-escura-marrom: #291100;
+} 
+
+body {
+    background-color: var(--cor-clara-verde);
+}
+
+/* CONTAINER */
+.container {
+    width: 95%;
+    margin: 20px auto;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-weight: normal;
+}
+
+#img-logo img {
+    width: 80px;
+}
+
+/* configuracoes gerais para qualquer um dos buttons */
+button {
+    background-color: var(--verde-medio);
+    color: white;
+    border: none;
+    font-weight: 400;
+    margin-right: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.01);
+    
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.voltar {
+    text-decoration: underline;
+    color: black;
+}
+
+/* ITEM */
+.container-item {
+    margin-top: 20px;
+    border: solid 1px gray;
+}
+
+/* LINHA SUPERIOR */
+.linha-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--branco);
+    padding: 10px;
+}
+
+.menu {
+    font-size: 20px;
+}
+
+.input-pequeno {
+    width: 80px;
+    height: 25px;
+}
+
+#Addrefeicao {
+    height: 25px;
+}
+
+.acoes {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--branco);
+    height: 120px;
+}
+
+.coluna input {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+}
+
+.btnCalcular {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* incrementacoes posteriores: Adicionar o bloco "item" quando o usuario apertar em "adiconar refeicao" OU quando o usuario apertar em "adicionar refeicao" surge uma linha nova no bloco*/
+
+/* podemos criar um botao para o usuario adicionar os blocos "item" */

@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    background-color: #fcebe1; /* Cor de fundo clara do lado esquerdo */
+    color: #e0533c; /* Cor principal dos textos (tom avermelhado/laranja escuro) */
+    overflow-x: hidden;
+}
+
+/* CONTAINER PRINCIPAL (DIVIDIDO EM 2 COLUNAS) */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* PARTE ESQUERDA - CONTEÚDO */
+.main-content {
+    flex: 1;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* SEÇÃO TOPO (HEADER) */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-logo {
+    width: 40px;
+    height: 40px;
+    background-color: transparent; /* Espaço vazio para sua imagem */
+}
+
+.header-section h1 {
+    font-size: 50px;
+    font-weight: 300;
+    
+    display: flex;
+    align-items: center;
+}
+
+.alert-box {
+    background-color: #fcdfa2; /* Amarelo do alerta */
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.alert-text {
+    display: flex;
+    flex-direction: column;
+    color: #e0533c;
+    font-size: 30px;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.alert-text span {
+    font-weight: 300;
+}
+
+.alert-text strong {
+    font-weight: 600;
+}
+
+.icon-alert {
+    width: 200px;
+    
+}
+
+/* SEÇÃO CAUSAS */
+.causes-section {
+    margin-bottom: 20px;
+}
+
+.causes-section h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e0533c;
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+.causes-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.cause-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 12%;
+}
+
+.cause-item img {
+    width: 70px;
+    
+    margin-bottom: 12px;
+}
+
+.cause-item p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* DIVISORAS HORIZONTAIS */
+.divider {
+    border: none;
+    border-top: 1px solid rgba(224, 83, 60, 0.3);
+    margin: 20px 0;
+}
+
+/* SEÇÃO INGREDIENTES */
+.ingredients-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
+.ingredients-list-box {
+    width: 40%;
+    border-right: 2px solid rgba(224, 83, 60, 0.3);
+    padding-right: 20px;
+}
+
+.ingredients-list-box h3, .diet-box h3, .healthy-box h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.ingredients-list-box ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.ingredients-list-box ul li {
+    font-size: 20px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+/* Customização do bullet point */
+.ingredients-list-box ul li::before {
+    content: "•";
+    color: #e0533c;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.ingredients-desc-box {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-right: 40px;
+}
+
+.icon-search {
+    width: 150px;
+    
+    flex-shrink: 0;
+}
+
+.ingredients-desc-box p {
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* SEÇÃO ALTERNATIVAS (RODAPÉ) */
+.alternatives-section {
+    display: flex;
+    gap: 40px;
+}
+
+.diet-box {
+    width: 40%;
+    border-right: 2px solid rgba(224, 83, 60, 0.3);
+    padding-right: 20px;
+}
+
+.diet-box p {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.healthy-box {
+    width: 60%;
+}
+
+.healthy-box ol {
+    list-style: none;
+}
+
+.healthy-box ol li {
+    font-size: 20px;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.healthy-box ol li .item-text {
+    font-weight: 400;
+}
+
+.healthy-box ol li a {
+    color: #e0533c;
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+/* PARTE DIREITA - LATERAL LARANJA */
+.sidebar-content {
+    width: 35%;
+    background-color: #ff8a47; /* Cor de fundo laranja */
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff; /* Textos mudam para branco na barra lateral */
+    position: relative;
+}
+
+.exit-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.sidebar-content h2 {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    max-width: 250px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+/* GRÁFICO DE ROSCA EM CSS (67%) */
+.chart-container {
+    margin-bottom: 40px;
+}
+
+.pie-chart {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    /* Gradiente cônico simulando os 67% preenchidos com vermelho escuro */
+    background: conic-gradient(#d63411 0% 67%, #ff6b1c 67% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-center {
+    width: 110px;
+    height: 110px;
+    background-color: #ff8a47; /* Mesma cor de fundo da sidebar para vazar o centro */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-center span {
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* IMAGEM DA LATA */
+.can-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Joga a lata para a extremidade inferior */
+}
+
+.img-can {
+    width: 470px;
+    height: auto;
+    object-fit: contain;
+}

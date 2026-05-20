@@ -1,0 +1,128 @@
+:root {
+            --branco: #ffff;
+            --cor-clara-verde: #DAF7E9;
+            --verde-claro:#8DC4AA;
+            --verde-verde: #4C9170;
+            --verde-medio: #1E5E3F;
+            --verde-mato: #06331D;
+            --cor-escura-marrom: #291100;  /* Cor da linha divisória */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--verde-mato);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Botão de Saída (Canto Superior Direito) */
+        .exit-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 21px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        
+
+        /* Container Principal */
+        .contact-card {
+            background-color: var(--verde-claro);
+            width: 80%;
+            height: 700px;
+            border-radius: 15px;
+            display: flex;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        /* Lado Esquerdo - Informações */
+        .info-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #000000;
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 20px;
+            line-height: 1.4;
+            color: #333;
+            margin-bottom: 25px;
+            max-width: 450px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 4px;
+            background-color: var(--verde-medio);
+            margin: 15px 0;
+            border-radius: 2px;
+        }
+
+        .contact-details {
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .contact-item strong {
+            font-weight: 700;
+        }
+
+        .footer-message {
+            font-size: 18px;
+            color: #333;
+            margin-top: 30px;
+            max-width: 480px;
+            line-height: 1.5;
+        }
+
+        /* Lado Direito - Imagem */
+        .image-section {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Placeholder para sua imagem */
+        .illustration-placeholder {
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        .illustration-placeholder img {
+            width: 100%;
+            margin-bottom: -99px; /* Ajuste para apoiar no fundo do card */
+        }

@@ -1,0 +1,123 @@
+* {
+            margin: -3px;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            height: 100vh;
+            
+            display: flex;
+            overflow: hidden;
+            background-color: #06331D; /* Verde do fundo da direita */
+        }
+
+        /* CONTAINER DA ESQUERDA (RECEITA) */
+        .left-section {
+            width: 69%; /* Proporção exata do layout */
+            background-color: #EAEBD9; /* Fundo bege/esverdeado claro */
+            padding: 37px 51px;
+            overflow-y: auto;
+            position: relative;
+            z-index: 2; /* Garante que fique por cima do biscoito */
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+            font-size: 100px;
+            margin: -16px;
+        }
+
+        /* Área do Logo + Ícone de mais */
+        
+
+        
+
+        /* Títulos e Textos */
+        .main-title {
+            text-align: center;
+            color: #06331D;
+            font-size: 40px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .description {
+            color: #555;
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .section-title {
+            color: #2E5B3D;
+            font-size: 25px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            display: inline-block;
+            border-bottom: 2px solid #A4B598;
+            padding-bottom: 4px;
+        }
+
+        /* Listas e Modo de Preparo */
+        .ingredients-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .ingredients-list li {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .ingredients-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333;
+        }
+
+        .instructions-text {
+            font-size: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* CONTAINER DA DIREITA (IMAGEM DO BISCOITO) */
+        .right-section {
+            width: 35%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        /* Imagem do Biscoito (Entrando por baixo da aba esquerda) */
+        .cookie-img {
+            width: 754px;
+            height: 550px;
+            object-fit: cover;
+            border-radius: 0%;
+            margin-left: 0px;
+            z-index: 1;
+        }
+
+        /* Botão/Símbolo de saída no canto superior direito */
+        .exit-button {
+           position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 21px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        
