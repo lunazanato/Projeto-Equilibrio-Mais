@@ -1,3 +1,13 @@
+:root {
+    --branco: #ffff;
+    --cor-clara-verde: #EAEBD9;
+    --verde-claro:#8DC4AA;
+    --verde-verde: #4C9170;
+    --verde-medio: #1E5E3F;
+    --verde-mato: #06331D;
+    --cor-escura-marrom: #291100;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,33 +16,32 @@
 
 body {
     font-family: 'Public Sans', sans-serif;
-    background-color: #fcebe1; /* Cor de fundo clara do lado esquerdo */
-    color: #e0533c; /* Cor principal dos textos (tom avermelhado/laranja escuro) */
+    background-color: var(--cor-clara-verde);
+    color: var(--verde-mato);
     overflow-x: hidden;
 }
 
-/* CONTAINER PRINCIPAL (DIVIDIDO EM 2 COLUNAS) */
 .dashboard-container {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
-/* PARTE ESQUERDA - CONTEÚDO */
 .main-content {
     flex: 1;
-    padding: 40px 50px;
+    padding: clamp(15px, 3vh, 40px) clamp(20px, 3vw, 50px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
-/* SEÇÃO TOPO (HEADER) */
 .header-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: clamp(10px, 2vh, 25px);
 }
 
 .logo-area {
@@ -44,21 +53,21 @@ body {
 .icon-logo {
     width: 40px;
     height: 40px;
-    background-color: transparent; /* Espaço vazio para sua imagem */
+    background-color: transparent;
 }
 
 .header-section h1 {
-    font-size: 50px;
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
     font-weight: 300;
-    
     display: flex;
     align-items: center;
+    line-height: 1.1;
 }
 
 .alert-box {
-    background-color: #fcdfa2; /* Amarelo do alerta */
+    background-color: #fcdfa2;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 6px 15px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -68,7 +77,7 @@ body {
     display: flex;
     flex-direction: column;
     color: #e0533c;
-    font-size: 30px;
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
     text-align: right;
     line-height: 1.2;
 }
@@ -82,19 +91,18 @@ body {
 }
 
 .icon-alert {
-    width: 200px;
-    
+    width: clamp(80px, 10vw, 140px);
+    height: auto;
 }
 
-/* SEÇÃO CAUSAS */
 .causes-section {
-    margin-bottom: 20px;
+    margin-bottom: clamp(10px, 2vh, 20px);
 }
 
 .causes-section h2 {
-    font-size: 30px;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     font-weight: 400;
-    margin-bottom: 25px;
+    margin-bottom: clamp(10px, 2vh, 20px);
     border-bottom: 2px solid #e0533c;
     padding-bottom: 5px;
     width: fit-content;
@@ -112,33 +120,31 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 12%;
+    width: 14%;
 }
 
 .cause-item img {
-    width: 70px;
-    
-    margin-bottom: 12px;
+    width: clamp(40px, 5vh, 60px);
+    height: auto;
+    margin-bottom: 8px;
 }
 
 .cause-item p {
-    font-size: 20px;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
     font-weight: 400;
     line-height: 1.2;
 }
 
-/* DIVISORAS HORIZONTAIS */
 .divider {
     border: none;
     border-top: 1px solid rgba(224, 83, 60, 0.3);
-    margin: 20px 0;
+    margin: clamp(8px, 1.5vh, 15px) 0;
 }
 
-/* SEÇÃO INGREDIENTES */
 .ingredients-section {
     display: flex;
-    gap: 40px;
-    margin-bottom: 10px;
+    gap: clamp(20px, 3vw, 40px);
+    margin-bottom: clamp(5px, 1vh, 10px);
 }
 
 .ingredients-list-box {
@@ -148,9 +154,9 @@ body {
 }
 
 .ingredients-list-box h3, .diet-box h3, .healthy-box h3 {
-    font-size: 30px;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .ingredients-list-box ul {
@@ -159,12 +165,11 @@ body {
 }
 
 .ingredients-list-box ul li {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    margin-bottom: 6px;
     position: relative;
 }
 
-/* Customização do bullet point */
 .ingredients-list-box ul li::before {
     content: "•";
     color: #e0533c;
@@ -179,25 +184,24 @@ body {
     display: flex;
     align-items: center;
     gap: 25px;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 .icon-search {
-    width: 150px;
-    
+    width: clamp(60px, 7vw, 110px);
+    height: auto;
     flex-shrink: 0;
 }
 
 .ingredients-desc-box p {
-    font-size: 25px;
+    font-size: clamp(1rem, 1.3vw, 1.35rem);
     line-height: 1.4;
     font-weight: 400;
 }
 
-/* SEÇÃO ALTERNATIVAS (RODAPÉ) */
 .alternatives-section {
     display: flex;
-    gap: 40px;
+    gap: clamp(20px, 3vw, 40px);
 }
 
 .diet-box {
@@ -207,7 +211,7 @@ body {
 }
 
 .diet-box p {
-    font-size: 20px;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
     line-height: 1.4;
     text-align: justify;
 }
@@ -221,8 +225,8 @@ body {
 }
 
 .healthy-box ol li {
-    font-size: 20px;
-    margin-bottom: 18px;
+    font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+    margin-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -233,22 +237,22 @@ body {
 
 .healthy-box ol li a {
     color: #e0533c;
-    font-size: 12px;
+    font-size: 11px;
     text-decoration: underline;
     margin-top: 2px;
     opacity: 0.8;
 }
 
-/* PARTE DIREITA - LATERAL LARANJA */
 .sidebar-content {
     width: 35%;
-    background-color: #ff8a47; /* Cor de fundo laranja */
-    padding: 30px 40px;
+    background-color: #ff8a47;
+    padding: clamp(20px, 4vh, 40px) 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff; /* Textos mudam para branco na barra lateral */
+    color: #ffffff;
     position: relative;
+    height: 100%;
 }
 
 .exit-button {
@@ -263,27 +267,24 @@ body {
     gap: 5px;
 }
 
-
-
 .sidebar-content h2 {
-    font-size: 32px;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     font-weight: 400;
     text-align: center;
     max-width: 250px;
     line-height: 1.2;
-    margin-bottom: 40px;
+    margin-bottom: clamp(15px, 4vh, 40px);
 }
 
-/* GRÁFICO DE ROSCA EM CSS (67%) */
 .chart-container {
-    margin-bottom: 40px;
+    margin-bottom: clamp(15px, 4vh, 40px);
+    flex-shrink: 0;
 }
 
 .pie-chart {
-    width: 160px;
-    height: 160px;
+    width: clamp(110px, 15vh, 160px);
+    height: clamp(110px, 15vh, 160px);
     border-radius: 50%;
-    /* Gradiente cônico simulando os 67% preenchidos com vermelho escuro */
     background: conic-gradient(#d63411 0% 67%, #ff6b1c 67% 100%);
     display: flex;
     justify-content: center;
@@ -291,9 +292,9 @@ body {
 }
 
 .pie-center {
-    width: 110px;
-    height: 110px;
-    background-color: #ff8a47; /* Mesma cor de fundo da sidebar para vazar o centro */
+    width: clamp(75px, 10vh, 110px);
+    height: clamp(75px, 10vh, 110px);
+    background-color: #ff8a47;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -301,21 +302,46 @@ body {
 }
 
 .pie-center span {
-    font-size: 36px;
+    font-size: clamp(1.8rem, 3.5vh, 2.25rem);
     font-weight: 600;
     color: #ffffff;
 }
 
-/* IMAGEM DA LATA */
 .can-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: auto; /* Joga a lata para a extremidade inferior */
+    margin-top: auto;
+    overflow: hidden;
 }
 
 .img-can {
-    width: 470px;
+    width: 100%;
+    max-width: 260px;
+    max-height: 40vh;
     height: auto;
     object-fit: contain;
+}
+
+@media (max-height: 720px) or (max-width: 1100px) {
+    .dashboard-container {
+        height: auto;
+        max-height: none;
+        overflow-y: auto;
+        flex-direction: column;
+    }
+    
+    .main-content, .sidebar-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar-content {
+        padding: 40px 20px;
+    }
+
+    .img-can {
+        max-height: 250px;
+        margin-top: 20px;
+    }
 }

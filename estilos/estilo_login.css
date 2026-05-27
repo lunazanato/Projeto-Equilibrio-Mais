@@ -9,9 +9,6 @@
     --white-bg: #f2f5e9;
 } 
 
-
-/* MUDAR AS CORES DO ROOT */
-
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +27,7 @@ body {
 
 main {  
     width: 90vw;
+    
     background-color: var(--white-bg);
     border-radius: 15px; 
     overflow: hidden;
@@ -40,26 +38,28 @@ main {
     min-height: 80vh;
 }
 
-/* --- LADO ESQUERDO --- */
-.login{
+.login {
     flex: 1;
-    padding: 5px;
+    padding: 40px 20px;
     background-color: var(--white-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* configuracoes da logo roxa */
-#img-logo{
+#img-logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 } 
 
 img {  
     width: 120px;
 } 
-/* fim configuracoes da logo roxa */
 
 .container-conteudo {
+    width: 100%;
     max-width: 350px;
     margin: 0 auto;
     text-align: center;
@@ -72,9 +72,9 @@ h1 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #444;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .login-box {
@@ -107,7 +107,7 @@ p {
     padding-left: 10px;
 }
 
-.esq-senha, .criar-conta  {
+.esq-senha, .criar-conta {
     display: block;
     text-align: left;
     font-size: 0.8rem;
@@ -125,7 +125,6 @@ p {
     text-decoration: underline;
     color: var(--verde-mato);
 }
-
 
 .botao-entrar {
     font-size: 1em;
@@ -150,10 +149,6 @@ p {
     transform: scale(1.03);
 }
 
-.criar-conta a, .esq-senha a { 
-    color: var(--cor-escura-marrom); 
-}
-
 .social-icons {
     margin-top: 25px;
     display: flex;
@@ -167,15 +162,14 @@ p {
     transition: transform 0.5s ease;
     transform: scale(1.03);
 }
-/* --- FIM DO LADO ESQUERDO --- */
 
-/* --- LADO DIREITO --- */
 .info {
     flex: 1.2;
     background-image: linear-gradient(to left, #6ca276, #ecedda);
     padding: 40px;
-    position: relative;
-    /* Curva sutil separando os lados */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-top-left-radius: 100px 50%;
     border-bottom-left-radius: 100px 50%;
 }
@@ -215,58 +209,70 @@ p {
 
 .img-vegetais {
     text-align: center;
-    padding: 60px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 .img-vegetais img {
-    width: 650px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    animation: flutuar 2s ease-in-out infinite alternate;
 }
 
-/* Classe que aplica a animação à imagem */
-.img-vegetais img {
-    /* Mantém as configurações de tamanho/posição que você já tiver colocado */
-    
-    /* Configuração da animação: */
-    animation: flutuar 1s ease-in-out infinite alternate;
-}
-
-/* Criação do movimento da animação */
 @keyframes flutuar {
     0% {
-        transform: translateY(0); /* Posição inicial */
+        transform: translateY(0);
     }
     100% {
-        transform: translateY(60px); /* Move 25 pixels para cima */
+        transform: translateY(-15px);
     }
 }
 
 .info-adicional {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    left: 100px;
     text-align: right;
+    margin-top: 20px;
 }
 
 .info-adicional p {
     font-size: 0.9rem;
-    color: var(--dark-green);
+    color: var(--verde-mato);
     font-style: italic;
     line-height: 1.4;
+    margin-bottom: 0;
 }
 
 .saiba-mais {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: var(--dark-green);
+    color: var(--verde-mato);
     font-size: 0.8rem;
 }
-/* --- FIM DO LADO DIREITO --- */
 
+@media (max-width: 1200px) {
+    .img-vegetais img {
+        max-width: 350px;
+    }
+    .info {
+        border-top-left-radius: 60px 40%;
+        border-bottom-left-radius: 60px 40%;
+        padding: 30px;
+    }
+}
 
-/* Responsividade (TERMINAR) */
-@media (max-width: 800px) {
-    .inner-card { flex-direction: column; }
-    .info-side { border-radius: 0; }
+@media (max-width: 900px) {
+    main {
+        width: 100%;
+        max-width: 450px;
+    }
+    .container_tela_de_login {
+        flex-direction: column;
+    }
+    .info {
+        display: none;
+    }
 }
