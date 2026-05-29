@@ -1,123 +1,168 @@
+:root {
+    --bg-claro: #EAEBD9;
+    --verde-escuro: #06331D;
+    --verde-medio: #2E5B3D;
+    --linha-divisor: #A4B598;
+    --texto-escuro: #333333;
+    --texto-mutado: #555555;
+}
+
 * {
-            margin: -3px;
-            padding: 0;
-            box-sizing: border-box;
-            
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Public Sans', sans-serif;
-            height: 100vh;
-            
-            display: flex;
-            overflow: hidden;
-            background-color: #06331D; /* Verde do fundo da direita */
-        }
+body {
+    font-family: 'Public Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    background-color: var(--verde-escuro);
+}
 
-        /* CONTAINER DA ESQUERDA (RECEITA) */
-        .left-section {
-            width: 69%; /* Proporção exata do layout */
-            background-color: #EAEBD9; /* Fundo bege/esverdeado claro */
-            padding: 37px 51px;
-            overflow-y: auto;
-            position: relative;
-            z-index: 2; /* Garante que fique por cima do biscoito */
-            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
-            font-size: 100px;
-            margin: -16px;
-        }
+.left-section {
+    width: 65%; 
+    flex-shrink: 0;
+    height: 100%;
+    background-color: var(--bg-claro);
+    padding: clamp(25px, 5vh, 50px) clamp(30px, 5vw, 60px);
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+}
 
-        /* Área do Logo + Ícone de mais */
-        
+.main-title {
+    text-align: center;
+    color: var(--verde-escuro);
+    font-size: clamp(1.8rem, 4vh, 2.5rem);
+    font-weight: 400;
+    margin-bottom: clamp(15px, 3vh, 30px);
+    line-height: 1.2;
+}
 
-        
+.description {
+    color: var(--texto-mutado);
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: clamp(25px, 4vh, 40px);
+    font-weight: 300;
+}
 
-        /* Títulos e Textos */
-        .main-title {
-            text-align: center;
-            color: #06331D;
-            font-size: 40px;
-            font-weight: 400;
-            margin-bottom: 30px;
-            line-height: 1.3;
-        }
+.section-title {
+    color: var(--verde-medio);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 400;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 2px solid var(--linha-divisor);
+    padding-bottom: 6px;
+}
 
-        .description {
-            color: #555;
-            font-size: 20px;
-            line-height: 1.6;
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
+.ingredients-list {
+    list-style: none;
+    margin-bottom: clamp(25px, 4vh, 40px);
+}
 
-        .section-title {
-            color: #2E5B3D;
-            font-size: 25px;
-            font-weight: 400;
-            margin-bottom: 15px;
-            display: inline-block;
-            border-bottom: 2px solid #A4B598;
-            padding-bottom: 4px;
-        }
+.ingredients-list li {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    color: var(--texto-escuro);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.4;
+}
 
-        /* Listas e Modo de Preparo */
-        .ingredients-list {
-            list-style: none;
-            margin-bottom: 40px;
-        }
+.ingredients-list li::before {
+    content: "•";
+    position: absolute;
+    left: 5px;
+    color: var(--verde-medio);
+    font-weight: bold;
+}
 
-        .ingredients-list li {
-            font-size: 20px;
-            color: #333;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 15px;
-        }
+.instructions-text {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    text-align: justify;
+}
 
-        .ingredients-list li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #333;
-        }
+.right-section {
+    width: 35%;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
 
-        .instructions-text {
-            font-size: 20px;
-            color: #333;
-            line-height: 1.6;
-        }
+.cookie-img {
+    
+    object-fit: cover;
+    z-index: 1;
+}
 
-        /* CONTAINER DA DIREITA (IMAGEM DO BISCOITO) */
-        .right-section {
-            width: 35%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }
+.exit-button {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 3;
+    transition: opacity 0.2s ease;
+}
 
-        /* Imagem do Biscoito (Entrando por baixo da aba esquerda) */
-        .cookie-img {
-            width: 754px;
-            height: 550px;
-            object-fit: cover;
-            border-radius: 0%;
-            margin-left: 0px;
-            z-index: 1;
-        }
+.exit-button:hover {
+    opacity: 0.8;
+}
 
-        /* Botão/Símbolo de saída no canto superior direito */
-        .exit-button {
-           position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            text-decoration: none;
-            font-size: 21px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
+@media (max-width: 1024px) {
+    body {
+        overflow-y: auto;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
 
-        
+    .left-section {
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        padding: 40px 25px;
+        box-shadow: none;
+    }
+
+    .right-section {
+        width: 100%;
+        height: 350px;
+    }
+
+    .exit-button {
+        top: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 6px 14px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-section {
+        padding: 30px 15px;
+    }
+    .right-section {
+        height: 250px;
+    }
+}

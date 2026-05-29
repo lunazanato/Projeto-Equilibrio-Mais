@@ -150,9 +150,8 @@ nav a:hover {
 
 .container-cards {
     background-color: var(--verde-mato);
-    min-height: 530px;
-    height: auto;
-    padding-bottom: 40px;
+    
+    
 }
 
 .container {
@@ -167,10 +166,11 @@ nav a:hover {
 
 .card {
     background-color: var(--branco);
-    padding: 30px;
+    padding: 15px;
+    
     border-radius: 15px;
     width: 100%;
-    max-width: 380px;
+    max-width: 300px;
     min-height: 400px;
     height: auto;
     display: flex;
