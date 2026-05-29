@@ -220,7 +220,7 @@ p {
     width: 100%;
     max-width: 500px;
     height: auto;
-    animation: flutuar 2s ease-in-out infinite alternate;
+    animation: flutuar 1s ease-in-out infinite alternate;
 }
 
 @keyframes flutuar {
@@ -228,7 +228,7 @@ p {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-15px);
+        transform: translateY(-50px);
     }
 }
 
